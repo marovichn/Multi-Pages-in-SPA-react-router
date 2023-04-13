@@ -18,6 +18,8 @@
 
 .list a:hover,
 .list a.active {
-  color: var(--color-primary-800);
-  text-decoration: underline;
+  color: grey;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--color-primary-400);
 }
