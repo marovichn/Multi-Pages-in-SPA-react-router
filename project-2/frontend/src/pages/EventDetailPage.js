@@ -7,7 +7,9 @@ const EventDetailPage = () => {
     <>
       <h1>EventDetail Page</h1>
       <h2>ID ::: {params.eventsId} :::</h2>
-      <Link to="/events">Go back</Link>
+      <Link to=".." relative="path">
+        Go back
+      </Link>
     </>
   );
 };
