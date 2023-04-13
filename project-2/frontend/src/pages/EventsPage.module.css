@@ -1,0 +1,21 @@
+.list {
+  display: flexbox;
+  margin: 0 2rem;
+}
+
+.list li {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 5px;
+}
+.list img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.section h1 {
+  text-align: left;
+  margin-left: 4rem;
+}
