@@ -74,7 +74,7 @@ function EventForm({ method, event }) {
           Cancel
         </button>
         <button disabled={isSubmiting}>
-          {isSubmiting ? "submiting..." : "Save"}
+          {isSubmiting ? "Submiting..." : "Save"}
         </button>
       </div>
     </Form>
