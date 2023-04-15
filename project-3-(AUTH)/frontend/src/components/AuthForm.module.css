@@ -54,3 +54,10 @@
   line-height: 30px;
   border-radius: 5px;
 }
+
+.errP {
+  font-size: 22px;
+  background-color: rgb(151, 0, 0);
+  padding: 10px;
+  border-radius: 5px;
+}

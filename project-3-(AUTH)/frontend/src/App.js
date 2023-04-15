@@ -16,11 +16,14 @@ import NewsletterPage, { action as newsletterAction } from "./pages/Newsletter";
 import AuthenticationPage, {
   action as authAction,
 } from "./pages/Authentication";
+import { action as logoutAction } from "./pages/LogOut";
+import { loader as logoutLoader } from "./util/auth";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    loader: logoutLoader,
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
@@ -66,6 +69,10 @@ const router = createBrowserRouter([
         path: "auth",
         element: <AuthenticationPage></AuthenticationPage>,
         action: authAction,
+      },
+      {
+        path: "logout",
+        action: logoutAction,
       },
     ],
   },
