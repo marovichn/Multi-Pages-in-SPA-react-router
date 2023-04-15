@@ -1,1 +1,25 @@
-{"events":[{"title":"Pizza Party","image":"https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80","date":"2023-04-26","description":"Pizza fiesta come disfruta","id":"cd0df1a6-5258-436f-bc14-21d46c4c1589"},{"title":"A dummy event!!!!!!!!!","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","date":"2023-02-22","description":"Join this amazing event and connect with fellow developers.","id":"e1"},{"id":"e2","title":"A dummy event 2","date":"2023-02-24","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event 2 and connect with fellow developers."}]}
+{
+  "events": [
+    {
+      "title": "Pizza Party",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "date": "2023-04-26",
+      "description": "Pizza fiesta come disfruta",
+      "id": "cd0df1a6-5258-436f-bc14-21d46c4c1589"
+    },
+    {
+      "title": "A dummy event!!!!!!!!!",
+      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
+      "date": "2023-02-22",
+      "description": "Join this amazing event and connect with fellow developers.",
+      "id": "e1"
+    },
+    {
+      "title": "A dummy event!!!!!!!!!",
+      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
+      "date": "2023-02-22",
+      "description": "Join this amazing event and connect with fellow developers.",
+      "id": "e2"
+    }
+  ]
+}
