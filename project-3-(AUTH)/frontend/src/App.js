@@ -23,6 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    id: "root",
     loader: logoutLoader,
     errorElement: <ErrorPage />,
     children: [
