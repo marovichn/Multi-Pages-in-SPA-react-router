@@ -1,66 +1,70 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import EventsPage, { loader as eventsDataLoader } from "./pages/EventsPage";
-import EventDetailPage, {
-  loader as eventDetailDataLoader,
-  action as eventDetailDeleteAction,
-} from "./pages/EventDetailPage";
-import NewEventPage, { action as newEventSaving } from "./pages/NewEventPage";
-import RootLayout from "./pages/RootLayout";
-import EventRoot from "./pages/EventRoot";
-import ErrorPage from "./pages/Error";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
 import EditEventPage from "./pages/EditEventPage";
-import { action as eventFormAction } from "../src/components/EventForm";
+import ErrorPage from "./pages/Error";
+import EventDetailPage, {
+  loader as eventDetailLoader,
+  action as deleteEventAction,
+} from "./pages/EventDetailPage";
+import EventsPage, { loader as eventsLoader } from "./pages/EventsPage";
+import EventsRootLayout from "./pages/EventRoot";
+import HomePage from "./pages/HomePage";
+import NewEventPage from "./pages/NewEventPage";
+import RootLayout from "./pages/RootLayout";
+import { action as manipulateEventAction } from "./components/EventForm";
+import NewsletterPage, { action as newsletterAction } from "./pages/Newsletter";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootLayout></RootLayout>,
+    element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      {
-        index: true,
-        element: <HomePage></HomePage>,
-      },
+      { index: true, element: <HomePage /> },
       {
         path: "events",
-        element: <EventRoot></EventRoot>,
+        element: <EventsRootLayout />,
         children: [
           {
             index: true,
-            element: <EventsPage></EventsPage>,
-            loader: eventsDataLoader,
+            element: <EventsPage />,
+            loader: eventsLoader,
           },
           {
             path: ":eventId",
             id: "event-detail",
-            loader: eventDetailDataLoader,
+            loader: eventDetailLoader,
             children: [
               {
                 index: true,
-                element: <EventDetailPage></EventDetailPage>,
-                action: eventDetailDeleteAction,
+                element: <EventDetailPage />,
+                action: deleteEventAction,
               },
               {
                 path: "edit",
-                element: <EditEventPage></EditEventPage>,
-                action: eventFormAction,
+                element: <EditEventPage />,
+                action: manipulateEventAction,
               },
             ],
           },
           {
             path: "new",
-            element: <NewEventPage></NewEventPage>,
-            action: eventFormAction,
+            element: <NewEventPage />,
+            action: manipulateEventAction,
           },
         ],
+      },
+      {
+        path: "newsletter",
+        element: <NewsletterPage />,
+        action: newsletterAction,
       },
     ],
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router}></RouterProvider>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
