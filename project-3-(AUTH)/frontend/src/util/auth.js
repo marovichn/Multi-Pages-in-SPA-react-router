@@ -6,3 +6,13 @@ export function getAuthToken() {
 export function loader() {
   return getAuthToken();
 }
+
+export function checkAuthLoader() {
+  const token = getAuthToken();
+
+  if (!token) {
+    redirect("/auth");
+  }
+
+  return null;
+}
